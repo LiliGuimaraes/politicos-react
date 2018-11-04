@@ -41,24 +41,33 @@ class SelectPolitician extends Component {
     return getOptionsCallback(input, callback, politician)
   }
 
+  handleUpdateInput() {
+    this.props.HTTPClient.get('/politicians/search').then(result => {
+      this.props.dispatch(changePoliticianList(result.data))
+    })
+  }
+
   render() {
     if (!this.props.list) {
       return null
     }
 
     return (
-      <Multiselect
-        label="Políticos"
-        placeholder="Escolha uma ou vários políticos..."
-        loadOptions={this.getOptions.bind(this)}
-        onChange={selected =>
-          this.props.dispatch(changePoliticianSelected(selected))}
-        onInputChange={debounce(
-          selected => this.props.dispatch(fetchPolitician(selected)),
-          500
-        )}
-        value={this.props.selected}
-      />
+      <div>
+        <Multiselect
+          label="Políticos"
+          placeholder="Escolha uma ou vários políticos..."
+          loadOptions={this.getOptions.bind(this)}
+          onChange={selected =>
+            this.props.dispatch(changePoliticianSelected(selected))
+          }
+          onInputChange={debounce(
+            selected => this.props.dispatch(fetchPolitician(selected)),
+            500
+          )}
+          value={this.props.selected}
+        />
+      </div>
     )
   }
 }

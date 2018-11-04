@@ -17,11 +17,18 @@
 
 import React from 'react'
 
+import { List, ListItem, ListItemIcon, ListItemText } from 'material-ui'
+import AutoRenewIcon from 'material-ui-icons/Autorenew'
+
 const Loading = () => (
-  <div>
-    <span className="glyphicon glyphicon-refresh glyphicon-refresh-animate" />
-    <span>Loading...</span>
-  </div>
+  <List>
+    <ListItem button>
+      <ListItemIcon>
+        <AutoRenewIcon />
+      </ListItemIcon>
+      <ListItemText inset primary="Loading..." />
+    </ListItem>
+  </List>
 )
 
 export default Loading

@@ -30,10 +30,8 @@ const PoliticianCandidacies = props => {
   })
 
   return (
-    <div className="panel panel-info candidacies">
-      <div className="panel-heading">
-        <h3 className="panel-title">Candidaturas</h3>
-      </div>
+    <div>
+      <h3 className="panel-title">Candidaturas</h3>
       <div className="panel-body">{candidacyYears}</div>
     </div>
   )

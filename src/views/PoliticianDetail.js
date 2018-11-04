@@ -18,6 +18,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { ListItem } from 'material-ui'
+
 import PoliticianCandidacies from './PoliticianCandidacies'
 
 class PoliticianDetail extends Component {
@@ -32,8 +34,9 @@ class PoliticianDetail extends Component {
       this.politician.alternative_names[0] &&
       this.politician.name != this.politician.alternative_names[0].name
     ) {
-      return `${this.politician.alternative_names[0].name} (${this.politician
-        .name})`
+      return `${this.politician.alternative_names[0].name} (${
+        this.politician.name
+      })`
     }
     return this.politician.name
   }
@@ -60,8 +63,8 @@ class PoliticianDetail extends Component {
     if (!this.politician.picture) {
       return (
         <div>
-          <span className="glyphicon glyphicon-user" aria-hidden="true" />Sem
-          Foto
+          <span className="glyphicon glyphicon-user" aria-hidden="true" />
+          Sem Foto
         </div>
       )
     } else {
@@ -92,16 +95,12 @@ class PoliticianDetail extends Component {
     }
 
     return (
-      <div className="">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="politician-name">{this.getPoliticianName()}</div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-3">{this.getPicture()}</div>
-          <div className="col-lg-5">
-            <div className="details">
+      <div style={{ marginLeft: 24, marginTop: 48 }}>
+        <h2>{this.getPoliticianName()}</h2>
+        <ListItem>
+          <div style={{ display: 'flex', width: '100%' }}>
+            <div style={{ flexGrow: 1, width: '33%' }}>{this.getPicture()}</div>
+            <div style={{ flexGrow: 1, width: '33%' }}>
               <p>Sexo: {this.getGender()}</p>
               <p>Partido: {this.getPoliticalParties()}</p>
               <p>Estado civil: {this.politician.marital_status.name}</p>
@@ -115,11 +114,11 @@ class PoliticianDetail extends Component {
               <p>Email: {this.politician.email}</p>
               <p>Website: {this.politician.website}</p>
             </div>
+            <div style={{ flexGrow: 1, width: '33%' }}>
+              <PoliticianCandidacies data={this.politician.candidacies} />
+            </div>
           </div>
-          <div className="col-lg-4">
-            <PoliticianCandidacies data={this.politician.candidacies} />
-          </div>
-        </div>
+        </ListItem>
       </div>
     )
   }

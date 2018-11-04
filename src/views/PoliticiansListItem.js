@@ -21,13 +21,7 @@ import PropTypes from 'prop-types'
 import PoliticianDetail from './PoliticianDetail'
 
 const PoliticianListItem = ({ politician }) => {
-  return (
-    <li className="list-group-item">
-      <div className="politician-list">
-        <PoliticianDetail politician={politician} />
-      </div>
-    </li>
-  )
+  return <PoliticianDetail politician={politician} />
 }
 
 PoliticianListItem.propTypes = {

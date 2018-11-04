@@ -17,29 +17,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, combineReducers } from 'redux'
-import thunk from 'redux-thunk'
 
-import defaultReducers from './defaultReducers'
-import HTTPClient from './HTTPClient'
-import PoliticiansList from './views/PoliticiansList'
-import Filters from './views/Filters'
-
-const App = () => {
-  const rootReducers = combineReducers({
-    ...defaultReducers,
-  })
-  const store = createStore(rootReducers, applyMiddleware(thunk))
-
-  return (
-    <Provider store={store}>
-      <div className="container">
-        <Filters HTTPClient={HTTPClient} />
-        <PoliticiansList HTTPClient={HTTPClient} />
-      </div>
-    </Provider>
-  )
-}
+import App from './App'
 
 ReactDOM.render(<App />, document.querySelector('.main'))

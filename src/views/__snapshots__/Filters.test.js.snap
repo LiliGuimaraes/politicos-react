@@ -1,116 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Filters /> renders without crashing 1`] = `
-<div>
+<div
+  className="MuiDrawer-docked-1"
+>
   <div
-    className="filter-row row"
+    className="MuiPaper-root-12 MuiPaper-shadow0-14 MuiDrawer-paper-2 MuiDrawer-paperAnchorRight-4 MuiDrawer-paperAnchorDockedRight-9"
   >
     <div
-      className="col-md-12"
+      style={
+        Object {
+          "margin": "64px 24px",
+          "paddingBottom": 72,
+          "width": 340,
+        }
+      }
     >
       <div>
-        <h4>
-          Políticos
-        </h4>
-        <div
-          className="Select Select--multi is-clearable is-loading is-searchable"
-          style={undefined}
-        >
+        <div>
+          <h4>
+            Políticos
+          </h4>
           <div
-            className="Select-control"
-            onKeyDown={[Function]}
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
+            className="Select Select--multi is-clearable is-loading is-searchable"
             style={undefined}
           >
-            <span
-              className="Select-multi-value-wrapper"
-              id="react-select-2--value"
+            <div
+              className="Select-control"
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={undefined}
             >
-              <div
-                className="Select-placeholder"
+              <span
+                className="Select-multi-value-wrapper"
+                id="react-select-2--value"
               >
-                Loading...
-              </div>
-              <div
-                className="Select-input"
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <input
-                  aria-activedescendant="react-select-2--value"
-                  aria-describedby={undefined}
-                  aria-expanded="false"
-                  aria-haspopup="false"
-                  aria-label={undefined}
-                  aria-labelledby={undefined}
-                  aria-owns=""
-                  className={undefined}
-                  id={undefined}
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={false}
-                  role="combobox"
-                  style={
-                    Object {
-                      "boxSizing": "content-box",
-                      "width": "5px",
-                    }
-                  }
-                  tabIndex={undefined}
-                  value=""
-                />
                 <div
+                  className="Select-placeholder"
+                >
+                  Loading...
+                </div>
+                <div
+                  className="Select-input"
                   style={
                     Object {
-                      "height": 0,
-                      "left": 0,
-                      "overflow": "scroll",
-                      "position": "absolute",
-                      "top": 0,
-                      "visibility": "hidden",
-                      "whiteSpace": "pre",
+                      "display": "inline-block",
                     }
                   }
                 >
-                  
+                  <input
+                    aria-activedescendant="react-select-2--value"
+                    aria-describedby={undefined}
+                    aria-expanded="false"
+                    aria-haspopup="false"
+                    aria-label={undefined}
+                    aria-labelledby={undefined}
+                    aria-owns=""
+                    className={undefined}
+                    id={undefined}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    role="combobox"
+                    style={
+                      Object {
+                        "boxSizing": "content-box",
+                        "width": "5px",
+                      }
+                    }
+                    tabIndex={undefined}
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
                 </div>
-              </div>
-            </span>
-            <span
-              aria-hidden="true"
-              className="Select-loading-zone"
-            >
+              </span>
               <span
-                className="Select-loading"
-              />
-            </span>
-            <span
-              className="Select-arrow-zone"
-              onMouseDown={[Function]}
-            >
+                aria-hidden="true"
+                className="Select-loading-zone"
+              >
+                <span
+                  className="Select-loading"
+                />
+              </span>
               <span
-                className="Select-arrow"
+                className="Select-arrow-zone"
                 onMouseDown={[Function]}
-              />
-            </span>
+              >
+                <span
+                  className="Select-arrow"
+                  onMouseDown={[Function]}
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Partidos
@@ -206,10 +208,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Cargos
@@ -305,14 +303,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Escolaridades
@@ -408,10 +398,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Eleições
@@ -507,14 +493,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Estados
@@ -610,10 +588,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Cidades
@@ -709,14 +683,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Eleito
@@ -812,10 +778,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Sexo
@@ -911,14 +873,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Profissões
@@ -1014,10 +968,6 @@ exports[`<Filters /> renders without crashing 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
       <div>
         <h4>
           Estado Civil
@@ -1114,18 +1064,43 @@ exports[`<Filters /> renders without crashing 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="filter-row row"
-  >
     <div
-      className="col-md-6"
+      style={
+        Object {
+          "background": "#eee",
+          "bottom": 0,
+          "padding": 24,
+          "position": "fixed",
+          "width": "100%",
+        }
+      }
     >
       <button
-        className="btn btn-primary btn-filter"
+        className="MuiButtonBase-root-54 MuiButton-root-39 MuiButton-raised-46 MuiButton-raisedPrimary-48"
+        disabled={false}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+        type="button"
       >
-        Filtrar
+        <span
+          className="MuiButton-label-41"
+        >
+          Filtrar
+        </span>
+        <span
+          className="MuiTouchRipple-root-56"
+        />
       </button>
     </div>
   </div>

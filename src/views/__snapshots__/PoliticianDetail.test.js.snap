@@ -2,37 +2,48 @@
 
 exports[`<PoliticianDetail /> Details renders gender Female 1`] = `
 <div
-  className=""
+  style={
+    Object {
+      "marginLeft": 24,
+      "marginTop": 48,
+    }
+  }
 >
-  <div
-    className="row"
+  <h2>
+    undefined (Metal)
+  </h2>
+  <li
+    className="MuiListItem-root-1 MuiListItem-gutters-8 MuiListItem-default-4"
+    disabled={false}
   >
     <div
-      className="col-lg-12"
+      style={
+        Object {
+          "display": "flex",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="politician-name"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        undefined (Metal)
+        <img
+          className="politician-picture"
+          src="https://rock.com/me.png"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-3"
-    >
-      <img
-        className="politician-picture"
-        src="https://rock.com/me.png"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
       <div
-        className="details"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
         <p>
           Sexo: 
@@ -82,64 +93,74 @@ exports[`<PoliticianDetail /> Details renders gender Female 1`] = `
           https://rock.com
         </p>
       </div>
-    </div>
-    <div
-      className="col-lg-4"
-    >
       <div
-        className="panel panel-info candidacies"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        <div
-          className="panel-heading"
-        >
+        <div>
           <h3
             className="panel-title"
           >
             Candidaturas
           </h3>
+          <div
+            className="panel-body"
+          />
         </div>
-        <div
-          className="panel-body"
-        />
       </div>
     </div>
-  </div>
+  </li>
 </div>
 `;
 
 exports[`<PoliticianDetail /> Details renders politician name without alternative names 1`] = `
 <div
-  className=""
+  style={
+    Object {
+      "marginLeft": 24,
+      "marginTop": 48,
+    }
+  }
 >
-  <div
-    className="row"
+  <h2>
+    Metal
+  </h2>
+  <li
+    className="MuiListItem-root-1 MuiListItem-gutters-8 MuiListItem-default-4"
+    disabled={false}
   >
     <div
-      className="col-lg-12"
+      style={
+        Object {
+          "display": "flex",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="politician-name"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        Metal
+        <img
+          className="politician-picture"
+          src="https://rock.com/me.png"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-3"
-    >
-      <img
-        className="politician-picture"
-        src="https://rock.com/me.png"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
       <div
-        className="details"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
         <p>
           Sexo: 
@@ -189,64 +210,74 @@ exports[`<PoliticianDetail /> Details renders politician name without alternativ
           https://rock.com
         </p>
       </div>
-    </div>
-    <div
-      className="col-lg-4"
-    >
       <div
-        className="panel panel-info candidacies"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        <div
-          className="panel-heading"
-        >
+        <div>
           <h3
             className="panel-title"
           >
             Candidaturas
           </h3>
+          <div
+            className="panel-body"
+          />
         </div>
-        <div
-          className="panel-body"
-        />
       </div>
     </div>
-  </div>
+  </li>
 </div>
 `;
 
 exports[`<PoliticianDetail /> Details renders politician name without ethnicity 1`] = `
 <div
-  className=""
+  style={
+    Object {
+      "marginLeft": 24,
+      "marginTop": 48,
+    }
+  }
 >
-  <div
-    className="row"
+  <h2>
+    undefined (Metal)
+  </h2>
+  <li
+    className="MuiListItem-root-1 MuiListItem-gutters-8 MuiListItem-default-4"
+    disabled={false}
   >
     <div
-      className="col-lg-12"
+      style={
+        Object {
+          "display": "flex",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="politician-name"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        undefined (Metal)
+        <img
+          className="politician-picture"
+          src="https://rock.com/me.png"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-3"
-    >
-      <img
-        className="politician-picture"
-        src="https://rock.com/me.png"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
       <div
-        className="details"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
         <p>
           Sexo: 
@@ -296,64 +327,74 @@ exports[`<PoliticianDetail /> Details renders politician name without ethnicity 
           https://rock.com
         </p>
       </div>
-    </div>
-    <div
-      className="col-lg-4"
-    >
       <div
-        className="panel panel-info candidacies"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        <div
-          className="panel-heading"
-        >
+        <div>
           <h3
             className="panel-title"
           >
             Candidaturas
           </h3>
+          <div
+            className="panel-body"
+          />
         </div>
-        <div
-          className="panel-body"
-        />
       </div>
     </div>
-  </div>
+  </li>
 </div>
 `;
 
 exports[`<PoliticianDetail /> Details renders politician name without state 1`] = `
 <div
-  className=""
+  style={
+    Object {
+      "marginLeft": 24,
+      "marginTop": 48,
+    }
+  }
 >
-  <div
-    className="row"
+  <h2>
+    undefined (Metal)
+  </h2>
+  <li
+    className="MuiListItem-root-1 MuiListItem-gutters-8 MuiListItem-default-4"
+    disabled={false}
   >
     <div
-      className="col-lg-12"
+      style={
+        Object {
+          "display": "flex",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="politician-name"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        undefined (Metal)
+        <img
+          className="politician-picture"
+          src="https://rock.com/me.png"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-3"
-    >
-      <img
-        className="politician-picture"
-        src="https://rock.com/me.png"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
       <div
-        className="details"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
         <p>
           Sexo: 
@@ -403,28 +444,27 @@ exports[`<PoliticianDetail /> Details renders politician name without state 1`] 
           https://rock.com
         </p>
       </div>
-    </div>
-    <div
-      className="col-lg-4"
-    >
       <div
-        className="panel panel-info candidacies"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        <div
-          className="panel-heading"
-        >
+        <div>
           <h3
             className="panel-title"
           >
             Candidaturas
           </h3>
+          <div
+            className="panel-body"
+          />
         </div>
-        <div
-          className="panel-body"
-        />
       </div>
     </div>
-  </div>
+  </li>
 </div>
 `;
 
@@ -436,37 +476,48 @@ exports[`<PoliticianDetail /> renders <Loading /> when there is no data 1`] = `
 
 exports[`<PoliticianDetail /> renders without crashing 1`] = `
 <div
-  className=""
+  style={
+    Object {
+      "marginLeft": 24,
+      "marginTop": 48,
+    }
+  }
 >
-  <div
-    className="row"
+  <h2>
+    undefined (Metal)
+  </h2>
+  <li
+    className="MuiListItem-root-1 MuiListItem-gutters-8 MuiListItem-default-4"
+    disabled={false}
   >
     <div
-      className="col-lg-12"
+      style={
+        Object {
+          "display": "flex",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="politician-name"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        undefined (Metal)
+        <img
+          className="politician-picture"
+          src="https://rock.com/me.png"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-3"
-    >
-      <img
-        className="politician-picture"
-        src="https://rock.com/me.png"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
       <div
-        className="details"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
         <p>
           Sexo: 
@@ -516,27 +567,26 @@ exports[`<PoliticianDetail /> renders without crashing 1`] = `
           https://rock.com
         </p>
       </div>
-    </div>
-    <div
-      className="col-lg-4"
-    >
       <div
-        className="panel panel-info candidacies"
+        style={
+          Object {
+            "flexGrow": 1,
+            "width": "33%",
+          }
+        }
       >
-        <div
-          className="panel-heading"
-        >
+        <div>
           <h3
             className="panel-title"
           >
             Candidaturas
           </h3>
+          <div
+            className="panel-body"
+          />
         </div>
-        <div
-          className="panel-body"
-        />
       </div>
     </div>
-  </div>
+  </li>
 </div>
 `;

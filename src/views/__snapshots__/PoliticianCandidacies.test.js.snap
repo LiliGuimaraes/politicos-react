@@ -1,18 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PoliticianCandidacies /> renders without crashing 1`] = `
-<div
-  className="panel panel-info candidacies"
->
-  <div
-    className="panel-heading"
+<div>
+  <h3
+    className="panel-title"
   >
-    <h3
-      className="panel-title"
-    >
-      Candidaturas
-    </h3>
-  </div>
+    Candidaturas
+  </h3>
   <div
     className="panel-body"
   >

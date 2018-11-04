@@ -19,6 +19,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import { Scrollbars } from 'react-custom-scrollbars'
+import { List } from 'material-ui'
+
 import PoliticiansListItem from './PoliticiansListItem'
 import { changePoliticiansList } from '../select/politiciansDuck'
 import Loading from '../components/Loading'
@@ -32,7 +35,11 @@ export class PoliticiansList extends Component {
 
   render() {
     if (!this.props.data) {
-      return <Loading />
+      return (
+        <List style={{ paddingTop: 70, marginRight: 400 }}>
+          <Loading />
+        </List>
+      )
     }
 
     const politicianItems = this.props.data.map(politician => {
@@ -46,7 +53,19 @@ export class PoliticiansList extends Component {
     })
 
     return (
-      <ul className="col-lg-12 list-group politicians">{politicianItems}</ul>
+      <List
+        style={{
+          padding: 0,
+          marginRight: 400,
+          overflow: 'auto',
+          height: '700px', // FIXME
+          paddingTop: 66,
+        }}
+      >
+        <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
+          {politicianItems}
+        </Scrollbars>
+      </List>
     )
   }
 }

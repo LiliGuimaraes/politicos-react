@@ -19,6 +19,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import { Drawer, Button } from 'material-ui'
+
 import {
   changePoliticiansList,
   resetPoliticiansList,
@@ -59,72 +61,47 @@ export class Filters extends Component {
 
     this.props.dispatch(resetPoliticiansList())
 
-    this.props.HTTPClient
-      .get('/politicians?' + queryString.toString())
-      .then(result => {
+    this.props.HTTPClient.get('/politicians?' + queryString.toString()).then(
+      result => {
         this.props.dispatch(changePoliticiansList(result.data))
-      })
+      }
+    )
   }
 
   render() {
     return (
-      <div>
-        <div className="filter-row row">
-          <div className="col-md-12">
-            <SelectPolitician {...this.props} />
-          </div>
+      <Drawer open type="permanent" anchor="right">
+        <div style={{ width: 340, margin: '64px 24px', paddingBottom: 72 }}>
+          <SelectPolitician {...this.props} />
+          <SelectPoliticalParty {...this.props} />
+          <SelectPoliticalOffice {...this.props} />
+          <SelectEducation {...this.props} />
+          <SelectElection {...this.props} />
+          <SelectState {...this.props} />
+          <SelectCity {...this.props} />
+          <SelectElected {...this.props} />
+          <SelectGender {...this.props} />
+          <SelectOccupation {...this.props} />
+          <SelectMaritalStatus {...this.props} />
         </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectPoliticalParty {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectPoliticalOffice {...this.props} />
-          </div>
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            background: '#eee',
+            padding: 24,
+            width: '100%',
+          }}
+        >
+          <Button
+            raised
+            color="primary"
+            onClick={this.onChangeQuery.bind(this)}
+          >
+            Filtrar
+          </Button>
         </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectEducation {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectElection {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectState {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectCity {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectElected {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectGender {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectOccupation {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectMaritalStatus {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-md-6">
-            <button
-              className="btn btn-primary btn-filter"
-              onClick={this.onChangeQuery.bind(this)}
-            >
-              Filtrar
-            </button>
-          </div>
-        </div>
-      </div>
+      </Drawer>
     )
   }
 }

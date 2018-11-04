@@ -68,7 +68,7 @@ describe('<Filters />', () => {
         />
       </Provider>
     )
-    component.find('.btn-filter').simulate('click')
+    component.find('button').simulate('click')
 
     expect(dispatchMock).toHaveBeenCalledTimes(0)
   })
@@ -93,7 +93,7 @@ describe('<Filters />', () => {
         />
       </Provider>
     )
-    component.find('.btn-filter').simulate('click')
+    component.find('button').simulate('click')
 
     expect(dispatchMock).toHaveBeenCalledWith(resetPoliticiansList())
     expect(dispatchMock).toHaveBeenCalledWith(

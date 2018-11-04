@@ -1,61 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PoliticiansList /> renders <Loading /> when there is no data 1`] = `
-<div>
-  <span
-    className="glyphicon glyphicon-refresh glyphicon-refresh-animate"
-  />
-  <span>
-    Loading...
-  </span>
-</div>
+<ul
+  className="MuiList-root-1 MuiList-padding-2"
+  style={
+    Object {
+      "marginRight": 400,
+      "paddingTop": 70,
+    }
+  }
+>
+  <ul
+    className="MuiList-root-1 MuiList-padding-2"
+  >
+    <li
+      className="MuiButtonBase-root-15 MuiListItem-root-5 MuiListItem-gutters-12 MuiListItem-button-13 MuiListItem-default-8"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-18 MuiListItemIcon-root-17"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"
+        />
+      </svg>
+      <div
+        className="MuiListItemText-root-25 MuiListItemText-inset-26"
+      >
+        <h3
+          className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-text-28"
+        >
+          Loading...
+        </h3>
+      </div>
+      <span
+        className="MuiTouchRipple-root-54"
+      />
+    </li>
+  </ul>
+</ul>
 `;
 
 exports[`<PoliticiansList /> renders without crashing 1`] = `
 <ul
-  className="col-lg-12 list-group politicians"
+  className="MuiList-root-1 MuiList-padding-2"
+  style={
+    Object {
+      "height": "700px",
+      "marginRight": 400,
+      "overflow": "auto",
+      "padding": 0,
+      "paddingTop": 66,
+    }
+  }
 >
-  <li
-    className="list-group-item"
+  <div
+    style={
+      Object {
+        "height": "100%",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": "100%",
+      }
+    }
   >
     <div
-      className="politician-list"
+      style={
+        Object {
+          "WebkitOverflowScrolling": "touch",
+          "bottom": 0,
+          "left": 0,
+          "marginBottom": 0,
+          "marginRight": 0,
+          "overflow": "scroll",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
     >
       <div
-        className=""
+        style={
+          Object {
+            "marginLeft": 24,
+            "marginTop": 48,
+          }
+        }
       >
-        <div
-          className="row"
+        <h2>
+          undefined (Metal)
+        </h2>
+        <li
+          className="MuiListItem-root-5 MuiListItem-gutters-12 MuiListItem-default-8"
+          disabled={false}
         >
           <div
-            className="col-lg-12"
+            style={
+              Object {
+                "display": "flex",
+                "width": "100%",
+              }
+            }
           >
             <div
-              className="politician-name"
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "width": "33%",
+                }
+              }
             >
-              undefined (Metal)
+              <div>
+                <span
+                  aria-hidden="true"
+                  className="glyphicon glyphicon-user"
+                />
+                Sem Foto
+              </div>
             </div>
-          </div>
-        </div>
-        <div
-          className="row"
-        >
-          <div
-            className="col-lg-3"
-          >
-            <div>
-              <span
-                aria-hidden="true"
-                className="glyphicon glyphicon-user"
-              />
-              Sem Foto
-            </div>
-          </div>
-          <div
-            className="col-lg-5"
-          >
             <div
-              className="details"
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "width": "33%",
+                }
+              }
             >
               <p>
                 Sexo: 
@@ -105,30 +189,85 @@ exports[`<PoliticiansList /> renders without crashing 1`] = `
                 https://rock.com
               </p>
             </div>
-          </div>
-          <div
-            className="col-lg-4"
-          >
             <div
-              className="panel panel-info candidacies"
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "width": "33%",
+                }
+              }
             >
-              <div
-                className="panel-heading"
-              >
+              <div>
                 <h3
                   className="panel-title"
                 >
                   Candidaturas
                 </h3>
+                <div
+                  className="panel-body"
+                />
               </div>
-              <div
-                className="panel-body"
-              />
             </div>
           </div>
-        </div>
+        </li>
       </div>
     </div>
-  </li>
+    <div
+      style={
+        Object {
+          "borderRadius": 3,
+          "bottom": 2,
+          "display": "none",
+          "height": 6,
+          "left": 2,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 2,
+          "transition": "opacity 200ms",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,.2)",
+            "borderRadius": "inherit",
+            "cursor": "pointer",
+            "display": "block",
+            "height": "100%",
+            "position": "relative",
+          }
+        }
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "borderRadius": 3,
+          "bottom": 2,
+          "display": "none",
+          "opacity": 0,
+          "position": "absolute",
+          "right": 2,
+          "top": 2,
+          "transition": "opacity 200ms",
+          "width": 6,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "rgba(0,0,0,.2)",
+            "borderRadius": "inherit",
+            "cursor": "pointer",
+            "display": "block",
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
 </ul>
 `;
