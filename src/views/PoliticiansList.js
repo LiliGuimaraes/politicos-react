@@ -24,6 +24,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { changePoliticiansList } from "../select/politiciansDuck";
 import Loading from "../components/Loading";
 import PoliticianDetail from "./PoliticianDetail";
+import Chart from "./Chart";
 
 // FIXME: duplicate
 const drawerWidth = 400;
@@ -70,6 +71,7 @@ export class PoliticiansList extends Component {
     return (
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        <Chart />
         <ul>{politicianItems}</ul>
       </main>
     );
