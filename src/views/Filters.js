@@ -15,14 +15,20 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+
+import { connect } from "react-redux";
+
+import { withStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import Button from "@material-ui/core/Button";
 
 import {
   changePoliticiansList,
-  resetPoliticiansList,
-} from '../select/politiciansDuck'
+  resetPoliticiansList
+} from "../select/politiciansDuck";
+
 import {
   SelectCity,
   SelectEducation,
@@ -34,112 +40,109 @@ import {
   SelectPoliticalOffice,
   SelectPoliticalParty,
   SelectPolitician,
-  SelectState,
-} from '../select'
+  SelectState
+} from "../select";
+
+// FIXME: duplicate
+const drawerWidth = 400;
+
+const styles = theme => ({
+  drawerPaper: {
+    width: drawerWidth
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3,
+    marginRight: drawerWidth
+  },
+  toolbar: theme.mixins.toolbar
+});
 
 export class Filters extends Component {
   onChangeQuery() {
-    const state = this.props.state
-    let queryString = new URLSearchParams()
+    const state = this.props.state;
+    let queryString = new URLSearchParams();
 
     // FIXME: only select component
     Object.keys(state).map(objectKey => {
-      const obj = state[objectKey]
+      const obj = state[objectKey];
       if (!obj.selected) {
-        return
+        return null;
       }
-      obj.selected.map(item => {
-        return queryString.set(obj.query, item.value)
-      })
-    })
+      return obj.selected.map(item => {
+        return queryString.set(obj.query, item.value);
+      });
+    });
 
-    if (queryString.toString() == '') {
-      return
+    if (queryString.toString() === "") {
+      return;
     }
 
-    this.props.dispatch(resetPoliticiansList())
+    this.props.dispatch(resetPoliticiansList());
 
-    this.props.HTTPClient
-      .get('/politicians?' + queryString.toString())
-      .then(result => {
-        this.props.dispatch(changePoliticiansList(result.data))
-      })
+    this.props.HTTPClient.get("/politicians?" + queryString.toString()).then(
+      result => {
+        this.props.dispatch(changePoliticiansList(result.data));
+      }
+    );
   }
 
   render() {
+    const { classes } = this.props;
     return (
-      <div>
-        <div className="filter-row row">
-          <div className="col-md-12">
-            <SelectPolitician {...this.props} />
-          </div>
+      <Drawer
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper
+        }}
+        anchor="right"
+      >
+        <div className={classes.toolbar} />
+        <div style={{ margin: "8px 24px", paddingBottom: 124 }}>
+          <SelectPolitician {...this.props} />
+          <SelectPoliticalParty {...this.props} />
+          <SelectPoliticalOffice {...this.props} />
+          <SelectEducation {...this.props} />
+          <SelectElection {...this.props} />
+          <SelectState {...this.props} />
+          <SelectCity {...this.props} />
+          <SelectElected {...this.props} />
+          <SelectGender {...this.props} />
+          <SelectOccupation {...this.props} />
+          <SelectMaritalStatus {...this.props} />
         </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectPoliticalParty {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectPoliticalOffice {...this.props} />
-          </div>
+        <div
+          style={{
+            position: "fixed",
+            bottom: 0,
+            background: "#eee",
+            padding: 24,
+            width: "100%"
+          }}
+        >
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={this.onChangeQuery.bind(this)}
+          >
+            Filtrar
+          </Button>
         </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectEducation {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectElection {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectState {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectCity {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectElected {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectGender {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-lg-6">
-            <SelectOccupation {...this.props} />
-          </div>
-          <div className="col-lg-6">
-            <SelectMaritalStatus {...this.props} />
-          </div>
-        </div>
-        <div className="filter-row row">
-          <div className="col-md-6">
-            <button
-              className="btn btn-primary btn-filter"
-              onClick={this.onChangeQuery.bind(this)}
-            >
-              Filtrar
-            </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
-
-/* istanbul ignore next */
-const mapStateToProps = state => {
-  return {
-    state,
+      </Drawer>
+    );
   }
 }
 
 Filters.propTypes = {
-  state: PropTypes.object,
-  dispatch: PropTypes.func,
-  HTTPClient: PropTypes.object,
-}
+  classes: PropTypes.object.isRequired
+};
 
-export default connect(mapStateToProps)(Filters)
+/* istanbul ignore next */
+const mapStateToProps = state => {
+  return {
+    state
+  };
+};
+
+export default connect(mapStateToProps)(withStyles(styles)(Filters));
